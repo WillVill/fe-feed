@@ -1,0 +1,17 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "extends",
+        "mixin",
+				"include"
+      ]
+    }],
+    "indentation": "tab",
+    "number-leading-zero": null,
+    "unit-blacklist": ["em", "rem"],
+    "color-hex-length": "long",
+    "no-descending-specificity": null
+  }
+}

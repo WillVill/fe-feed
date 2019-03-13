@@ -2,13 +2,13 @@
 
 exports[`[Component] Loader renders 1`] = `
 <div
-  className="j-loader j-loader--large j-loader--true"
+  className="loader loader--large loader--true"
 >
   <div
-    className="j-loader__spinner"
+    className="loader__spinner"
   />
   <span
-    className="j-loader__text"
+    className="loader__text"
   >
     loading...
   </span>

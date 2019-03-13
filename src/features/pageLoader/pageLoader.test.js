@@ -1,5 +1,5 @@
 import React from 'react';
-import LoaderPage from './pageLoader.component.jsx/index.js';
+import LoaderPage from './pageLoader.component.jsx';
 // Importing shallow and toJson.
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
@@ -14,16 +14,24 @@ const setup = propOverrides => {
 
 	return {
 		props,
-		wrapper,
-		days: wrapper.find({ className: 'store-tasks__day-header' })
+		wrapper
 	};
 };
 
-describe('[Component] LoaderPage', () => {
+describe('[Feature] pageLoader', () => {
 	it('renders', () => {
 		const { wrapper } = setup();
-
 		expect(toJson(wrapper)).toMatchSnapshot();
+	});
+
+	it('passes proper text prop', () => {
+		const { wrapper } = setup();
+		expect(wrapper.find('Loader').props().children).toEqual("loading...");
+	});
+
+	it('passes proper changed text prop', () => {
+		const { wrapper } = setup({text: "Gnarley text"});
+		expect(wrapper.find('Loader').props().children).toEqual("Gnarley text");
 	});
 });
 

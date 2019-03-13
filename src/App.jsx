@@ -1,8 +1,8 @@
 import React from 'react';
-import { PagesRoutes } from './pages';
+import { PageRoutes } from './pages';
 
 const App = () => (
-	<PagesRoutes />
+	<PageRoutes />
 );
 
 export default App;

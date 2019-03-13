@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 
 // Test Setup
 const setup = propOverrides => {
-	const wrapper = shallow(<App/>);
+	const wrapper = shallow(<App />);
 
 	return {
 		wrapper
@@ -17,5 +17,5 @@ describe('[Component] WorkplaceSelection', () => {
 		const { wrapper } = setup();
 
 		expect(toJson(wrapper)).toMatchSnapshot();
-  });
+	});
 });

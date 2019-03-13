@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Page] MessageBoard renders 1`] = `
+<div
+  className="message-board"
+>
+  <div
+    className="message-board__post"
+    key="0"
+  >
+    post 1
+  </div>
+  <div
+    className="message-board__post"
+    key="1"
+  >
+    post 2
+  </div>
+</div>
+`;

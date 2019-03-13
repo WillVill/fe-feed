@@ -15,7 +15,8 @@ const setup = propOverrides => {
 
 	return {
 		props,
-		wrapper
+		wrapper,
+		loaderText: wrapper.find(".loader__text")
 	};
 };
 
@@ -25,11 +26,17 @@ describe('[Component] Loader', () => {
 
 		expect(toJson(wrapper)).toMatchSnapshot();
 	});
+	
+	it('shows proper loading text', () => {
+		const { loaderText } = setup();
+	
+		expect(loaderText.text()).toBe('loading...');
+	});
+
+	it('shows new loading text', () => {
+		const { wrapper } = setup();
+
+		wrapper.setProps({children: "Dude where's my car?"})
+		expect(wrapper.find(".loader__text").text()).toBe('Dude where\'s my car?');
+	});
 });
-
-it('shows proper loading text', () => {
-	const { wrapper } = setup();
-
-	expect(toJson(wrapper)).toMatchSnapshot();
-});
-
