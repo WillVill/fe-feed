@@ -1,9 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+// Test Setup
+const setup = propOverrides => {
+	const wrapper = shallow(<App/>);
+
+	return {
+		wrapper
+	};
+};
+
+describe('[Component] WorkplaceSelection', () => {
+	it('renders', () => {
+		const { wrapper } = setup();
+
+		expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

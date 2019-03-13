@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Component] LoaderPage renders 1`] = `
+<div
+  className="loader-wrapper"
+>
+  <Loader
+    active={true}
+    size="large"
+  />
+</div>
+`;

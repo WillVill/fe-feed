@@ -1,0 +1,19 @@
+.loader-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+}
+.loader {
+  text-align: center;
+  top: 35%;
+
+  &__spinner {
+    width: 22vw;
+    max-width: 100px;
+    height: 22vw;
+    max-height: 100px;
+  }
+}

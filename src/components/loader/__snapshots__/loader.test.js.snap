@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Component] Loader renders 1`] = `
+<div
+  className="j-loader j-loader--large j-loader--true"
+>
+  <div
+    className="j-loader__spinner"
+  />
+  <span
+    className="j-loader__text"
+  >
+    loading...
+  </span>
+</div>
+`;

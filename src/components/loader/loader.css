@@ -1,0 +1,55 @@
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loader {
+	position: relative;
+	width: 100%;
+
+	&__spinner,
+	&__spinner::after {
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		transition: all 0.2s;
+		transform: translateZ(0);
+		animation: spinner 1.4s infinite linear;
+		margin: auto;
+	}
+
+	&--tiny {
+		.loader__spinner {
+			border: 3px solid #F5F5F5;
+			border-left: 3px solid rgb(var(--palette-green));
+			font-size: 2px;
+			width: 13px;
+			height: 13px;
+		}
+	}
+
+	&--small {
+		.loader__spinner {
+			border: 3px solid #F5F5F5;
+			border-left: 3px solid rgb(var(--palette-green));
+			font-size: 2px;
+		}
+	}
+
+	&--large {
+		.loader__spinner {
+			border: 12px solid #F5F5F5;
+			border-left: 12px solid rgb(var(--palette-green));
+			font-size: 6px;
+		}
+
+		.loader__text {
+			line-height: 75px;
+		}
+	}
+}
